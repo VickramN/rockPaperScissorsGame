@@ -12,8 +12,63 @@ function getComputerChoice(){
             computer =  "PAPER";
             break;
     }
-
-    console.log(computer);
-
-
+    return computer;
 }
+
+let playerScore = 0;
+let computerScore = 0;
+
+
+function playRound(playerSelection, computerSelection){
+   
+    if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "SCISSORS"){
+        playerScore += 1;
+        return("You Win!!!, Rock beats Scissors")
+    } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "PAPER"){
+        computerScore += 1;
+        return("You Lose!!!, Paper beats Rock")
+    } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "ROCK"){
+        return("A Draw!!!, Both chose Rock")
+    } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "ROCK"){
+        computerScore += 1;
+        return("You Lose!!!, Scissors loses to Rock")
+    } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "PAPER"){
+        playerScore += 1;
+        return("You Win!!!, Scissors beats Paper")
+    } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "SCISSORS"){
+        return("A Draw!!!, Both chose Scissors")
+    } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "ROCK"){
+        playerScore += 1;
+        computerScore += 1;
+        return("You Win!!!, Paper beats Rock")
+    } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "SCISSORS"){
+        computerScore += 1;
+        return("You Lose!!!, Scissors beats Paper")
+    } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "PAPER"){
+        return("A Draw!!!, Both chose Paper")
+    } 
+}
+
+
+
+
+function game(){
+
+
+    for(let i = 0; i < 5; i++){
+
+        const playerSelection = prompt("Please choose Rock, Paper, or Scissors.");
+        const computerSelection = getComputerChoice();
+
+        console.log(playRound(playerSelection, computerSelection));
+        
+        }
+
+        if (playerScore > computerScore){
+            console.log("You won out of 5!!! Congratulations")
+        } else {
+            console.log("YOU LOST!!!!")
+        }
+    }
+
+
