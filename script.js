@@ -51,24 +51,5 @@ function playRound(playerSelection, computerSelection){
 
 
 
-
-function game(){
-
-
-    for(let i = 0; i < 5; i++){
-
-        const playerSelection = prompt("Please choose Rock, Paper, or Scissors.");
-        const computerSelection = getComputerChoice();
-
-        console.log(playRound(playerSelection, computerSelection));
-        
-        }
-
-        if (playerScore > computerScore){
-            console.log("You won out of 5!!! Congratulations")
-        } else {
-            console.log("YOU LOST!!!!")
-        }
-    }
-
-
+window.addEventListener( click, playRound());
+console.log(playerSelection);
