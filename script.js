@@ -19,16 +19,17 @@ let playerScore = 0;
 let computerScore = 0;
 
 
+
 function playRound(playerSelection, computerSelection){
-   
+    console.log(playerSelection);
     if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "SCISSORS"){
         playerScore += 1;
-        return("You Win!!!, Rock beats Scissors")
+        document.getElementById("demo").innerHTML = "You Win!!!, Rock beats Scissors"
     } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "PAPER"){
         computerScore += 1;
-        return("You Lose!!!, Paper beats Rock")
+        document.getElementById("demo").innerHTML = "You Lose!!!, Paper beats Rock"
     } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "ROCK"){
-        return("A Draw!!!, Both chose Rock")
+        document.getElementById("demo").innerHTML = "A Draw!!!, Both chose Rock"
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "ROCK"){
         computerScore += 1;
         return("You Lose!!!, Scissors loses to Rock")
@@ -51,5 +52,17 @@ function playRound(playerSelection, computerSelection){
 
 
 
-window.addEventListener( click, playRound());
-console.log(playerSelection);
+const rockButton = document.getElementById("rockButton");
+rockButton.addEventListener("click", function(){
+    playRound(rockButton.innerHTML,getComputerChoice());
+});
+
+const paperButton = document.getElementById("paperButton");
+paperButton.addEventListener("click", function(){
+    playRound(paperButton.innerHTML,getComputerChoice());
+});
+
+const scissorsButton = document.getElementById("scissorsButton");
+scissorsButton.addEventListener("click", function(){
+    playRound(scissorsButton.innerHTML,getComputerChoice());
+});
