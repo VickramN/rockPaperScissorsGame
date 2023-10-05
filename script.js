@@ -23,32 +23,41 @@ let computerScore = 0;
 function playRound(playerSelection, computerSelection){
     if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "SCISSORS"){
         playerScore += 1;
-        document.getElementById("demo").innerHTML = "You Win!!!, Rock beats Scissors"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "PAPER"){
         computerScore += 1;
-        document.getElementById("demo").innerHTML = "You Lose!!!, Paper beats Rock"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "ROCK"){
-        document.getElementById("demo").innerHTML = "A Draw!!!, Both chose Rock"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "ROCK"){
         computerScore += 1;
-        document.getElementById("demo").innerHTML = "You Lose!!!, Scissors loses to Rock"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "PAPER"){
         playerScore += 1;
-        document.getElementById("demo").innerHTML = "You Win!!!, Scissors beats Paper"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "SCISSORS"){
-        document.getElementById("demo").innerHTML = "A Draw!!!, Both chose Scissors"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "ROCK"){
         playerScore += 1;
-        document.getElementById("demo").innerHTML = "You Win!!!, Paper beats Rock"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "SCISSORS"){
         computerScore += 1;
-        document.getElementById("demo").innerHTML = "You Lose!!!, Scissors beats Paper"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "PAPER"){
-        document.getElementById("demo").innerHTML = "A Draw!!!, Both chose Paper"
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
     } 
+    if(playerScore == 5){
+        document.getElementById("results").innerHTML = "Congratulations, You won!!!!"
+        playerScore = 0;
+        computerScore = 0;
+    }   else if(computerScore == 5){
+        document.getElementById("results").innerHTML = "The computer won, you suck!!!!"
+        playerScore = 0;
+        computerScore = 0;
+    }
 }
 
-
+document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
 
 const rockButton = document.getElementById("rockButton");
 rockButton.addEventListener("click", function(){
