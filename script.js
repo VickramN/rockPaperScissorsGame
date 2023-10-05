@@ -21,7 +21,6 @@ let computerScore = 0;
 
 
 function playRound(playerSelection, computerSelection){
-    console.log(playerSelection);
     if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "SCISSORS"){
         playerScore += 1;
         document.getElementById("demo").innerHTML = "You Win!!!, Rock beats Scissors"
@@ -32,21 +31,20 @@ function playRound(playerSelection, computerSelection){
         document.getElementById("demo").innerHTML = "A Draw!!!, Both chose Rock"
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "ROCK"){
         computerScore += 1;
-        return("You Lose!!!, Scissors loses to Rock")
+        document.getElementById("demo").innerHTML = "You Lose!!!, Scissors loses to Rock"
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "PAPER"){
         playerScore += 1;
-        return("You Win!!!, Scissors beats Paper")
+        document.getElementById("demo").innerHTML = "You Win!!!, Scissors beats Paper"
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "SCISSORS"){
-        return("A Draw!!!, Both chose Scissors")
+        document.getElementById("demo").innerHTML = "A Draw!!!, Both chose Scissors"
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "ROCK"){
         playerScore += 1;
-        computerScore += 1;
-        return("You Win!!!, Paper beats Rock")
+        document.getElementById("demo").innerHTML = "You Win!!!, Paper beats Rock"
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "SCISSORS"){
         computerScore += 1;
-        return("You Lose!!!, Scissors beats Paper")
+        document.getElementById("demo").innerHTML = "You Lose!!!, Scissors beats Paper"
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "PAPER"){
-        return("A Draw!!!, Both chose Paper")
+        document.getElementById("demo").innerHTML = "A Draw!!!, Both chose Paper"
     } 
 }
 
