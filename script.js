@@ -17,34 +17,38 @@ function getComputerChoice(){
 
 let playerScore = 0;
 let computerScore = 0;
+let draw = 0;
 
 
 
 function playRound(playerSelection, computerSelection){
     if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "SCISSORS"){
         playerScore += 1;
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":"+ computerScore;
     } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "PAPER"){
         computerScore += 1;
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "ROCK" && computerSelection == "ROCK"){
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        draw += 1;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "ROCK"){
         computerScore += 1;
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "PAPER"){
         playerScore += 1;
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "SCISSORS" && computerSelection == "SCISSORS"){
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        draw += 1;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "ROCK"){
         playerScore += 1;
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "SCISSORS"){
         computerScore += 1;
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "PAPER"){
-        document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+        draw += 1;
+        document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
     } 
     if(playerScore == 5){
         document.getElementById("results").innerHTML = "Congratulations, You won!!!!"
@@ -57,7 +61,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-document.getElementById("currentScore").innerHTML = playerScore + ":" + computerScore;
+document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
 
 const rockButton = document.getElementById("rockButton");
 rockButton.addEventListener("click", function(){
