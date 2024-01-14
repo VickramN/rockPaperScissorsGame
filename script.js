@@ -54,10 +54,12 @@ function playRound(playerSelection, computerSelection){
         document.getElementById("results").innerHTML = "Congratulations, You won!!!!"
         playerScore = 0;
         computerScore = 0;
+        draw = 0;
     }   else if(computerScore == 5){
         document.getElementById("results").innerHTML = "The computer won, you suck!!!!"
         playerScore = 0;
         computerScore = 0;
+        draw = 0;
     }
 }
 
