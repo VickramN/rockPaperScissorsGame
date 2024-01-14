@@ -49,7 +49,8 @@ function playRound(playerSelection, computerSelection){
     } else if(playerSelection.toUpperCase() == "PAPER" && computerSelection == "PAPER"){
         draw += 1;
         document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
-    } 
+    }
+
     if(playerScore == 5){
         document.getElementById("results").innerHTML = "Congratulations, You won!!!!"
         playerScore = 0;
@@ -61,6 +62,7 @@ function playRound(playerSelection, computerSelection){
         computerScore = 0;
         draw = 0;
     }
+
 }
 
 document.getElementById("currentScore").innerHTML = playerScore + ":" + draw + ":" + computerScore;
@@ -79,3 +81,6 @@ const scissorsButton = document.getElementById("scissorsButton");
 scissorsButton.addEventListener("click", function(){
     playRound(scissorsButton.innerHTML,getComputerChoice());
 });
+
+
+

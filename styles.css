@@ -4,10 +4,35 @@ h1{
 }
 
 .buttons{
-    margin: 100px 250p;
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.buttons:hover{
+    background-color: #3e8e41;
 }
 
 .buttonsContainer{
     display: flex;
     justify-content: center;
+    background-color: #04AA6D;
+    
+}
+
+.scoreBoard{
+    text-align: center;
+    font-size: 100px;
+}
+
+.resultsAnnouncement{
+    text-align: center ;
+    font-size: 50px;
 }
