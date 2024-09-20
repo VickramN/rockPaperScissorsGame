@@ -1,38 +1,39 @@
-
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-.buttons{
-    background-color: #04AA6D; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-
+.buttons {
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.buttons:hover{
-    background-color: #3e8e41;
+.buttons:hover {
+  background-color: #3e8e41;
 }
 
-.buttonsContainer{
-    display: flex;
-    justify-content: center;
-    background-color: #04AA6D;
-    
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #04aa6d;
 }
 
-.scoreBoard{
-    text-align: center;
-    font-size: 100px;
+.scoreBoard {
+  text-align: center;
+  font-size: 100px;
 }
 
-.resultsAnnouncement{
-    text-align: center ;
-    font-size: 50px;
+.resultsAnnouncement {
+  text-align: center;
+  font-size: 50px;
+}
+
+#game-mode-selection {
+  text-align: center;
 }
