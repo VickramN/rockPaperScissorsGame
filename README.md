@@ -20,6 +20,10 @@ A variation of the classic game of Rock, Paper, Scissors that has five options, 
 - [Vickram Nauth](https://www.github.com/VickramN)
 
 
+## Screenshots
+
+![App Screenshot](https://github.com/VickramN/rockPaperScissorsGame/blob/main/UI_Screenshot.png)
+
 ## Appendix
 
 ![Game Logic](https://sinclairinternalarts.com/wp-content/uploads/2020/08/five-element-cycles.jpg)
