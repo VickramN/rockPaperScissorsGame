@@ -9,7 +9,10 @@
   <body>
     <h1>Fire, Water, Earth, Wood, Metal</h1>
     <div id="game-mode-selection">
+      <div id="gameModeLabel">
       <label>Select Game Mode:</label>
+      </div>
+      <div id="gameModeButtons">
       <input type="radio" id="bestOfThree" name="gameMode" value="3" checked />
       <label for="bestOfThree">Best of 3</label>
       <input type="radio" id="bestOfFive" name="gameMode" value="5" />
@@ -17,24 +20,31 @@
       <input type="radio" id="unlimited" name="gameMode" value="unlimited" />
       <label for="unlimited">Unlimited</label>
       <br \ />
-      <button type="button" onClick="setGameMode()">Change Game Mode</button>
+      </div>
+      <div id="gameModeSelectionButtonContainer">
+      <button id="gameModeSelectionButton" type="button" onClick="setGameMode()">Change Game Mode</button>
+      </div>
     </div>
 
-    <div class="buttonsContainer">
-      <button class="buttons" id="metalButton">Metal</button>
-      <button class="buttons" id="waterButton">Water</button>
-      <button class="buttons" id="woodButton">Wood</button>
-      <button class="buttons" id="earthButton">Earth</button>
-      <button class="buttons" id="fireButton">Fire</button>
-    </div>
+
 
     <div class="scoreBoard">
       <p id="currentScore"></p>
     </div>
+
+    <div class="buttonsContainer">
+      <input type="image" src="Assets/Metal.png" class="buttons" id="metalButton"></input>
+      <input type="image" src="Assets/Water.png" class="buttons" id="waterButton"></input>
+      <input type="image" src="Assets/Wood.png" class="buttons" id="woodButton"></input>
+      <input type="image" src="Assets/Rock.png" class="buttons" id="earthButton"></input>
+      <input type="image" src="Assets/Flame.png" class="buttons" id="fireButton"></input>
+    </div>
+
     <div class="resultsAnnouncement">
       <p id="results"></p>
       <button id="resetButton" onclick="resetGame()">Reset</button>
     </div>
+    
 
     <script src="script.js"></script>
   </body>

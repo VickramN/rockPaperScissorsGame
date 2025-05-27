@@ -1,39 +1,77 @@
+body{
+  background-image: url('Assets/BambooBackground2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: fantasy;
+}
+
 h1 {
   text-align: center;
 }
 
 .buttons {
-  background-color: #04aa6d; /* Green */
   border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: #FEFAE0;
+  padding: 17px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
 }
 
 .buttons:hover {
-  background-color: #3e8e41;
+  transform: translateY(-4px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .buttonsContainer {
   display: flex;
-  justify-content: center;
-  background-color: #04aa6d;
+  justify-content: space-evenly;
 }
 
 .scoreBoard {
   text-align: center;
-  font-size: 100px;
+  font-size: 75px;
+  color: #FEFAE0;
 }
 
 .resultsAnnouncement {
   text-align: center;
-  font-size: 50px;
+  font-size: 45px;
+  color: #FEFAE0;
 }
 
 #game-mode-selection {
   text-align: center;
+  padding: 10px;
+}
+
+#gameModeSelectionButton{
+  padding: 20px 10px;
+  border-radius: 100%;
+  background-color: #FEFAE0;
+  border-color: #FFCF50;
+}
+
+#resetButton{
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 12px;
+  background-color: #FEFAE0;
+  border-color: #FFCF50;
+}
+
+#gameModeButtons{
+  padding: 0.75em;
+  color: #FEFAE0;
+}
+
+#gameModeLabel{
+  font-size: 25px;
+  color: #fdf2e3;
 }
